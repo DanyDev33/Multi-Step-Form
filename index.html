@@ -27,37 +27,63 @@
   <main class="container">
     <!-- Sidebar start -->
     <section class="sidebar">
-      
-        Step 1
-        Your info
-     
-        Step 2
-        Select plan
 
-        Step 3
-        Add-ons
-       
-        Step 4
-        Summary
-      
+      <div class="sidebar__steps">
+        <div class="sidebar__circle active">1</div>
+        <div class="sidebar__text">
+          <p class="sidebar__text-one">STEP 1</p>
+          <p class="sidebar__text-two">YOUR INFO</p>
+        </div>
+      </div>
+
+      <div class="sidebar__steps">
+        <div class="sidebar__circle">2</div>
+        <div class="sidebar__text">
+          <p class="sidebar__text-one">STEP 2</p>
+          <p class="sidebar__text-two">SELECT PLAN</p>
+        </div>
+      </div>
+
+      <div class="sidebar__steps">
+        <div class="sidebar__circle">3</div>
+        <div class="sidebar__text">
+          <p class="sidebar__text-one">STEP 3</p>
+          <p class="sidebar__text-two">ADD-ONS</p>
+        </div>
+      </div>
+
+      <div class="sidebar__steps">
+        <div class="sidebar__circle">4</div>
+        <div class="sidebar__text">
+          <p class="sidebar__text-one">STEP 4</p>
+          <p class="sidebar__text-two">SUMMARY</p>
+        </div>
+      </div>
+
     </section>
     <!-- Sidebar end -->
 
     <!-- Step 1 start -->
     <section class="step-1">
       <h1>Personal info</h1>
-      Please provide your name, email address, and phone number.
+      <p>Please provide your name, email address, and phone number.</p>
 
-      Name
-      e.g. Stephen King
+      <div>
+        <p>Name</p>
+        <input type="text" name="name" id="name" placeholder="e.g. Stephen King" required>
+      </div>
 
-      Email Address
-      e.g. stephenking@lorem.com
+      <div>
+        <p>Email Address</p>
+        <input type="text" name="email-address" id="email-address" placeholder="e.g. stephenking@lorem.com" required>
+      </div>
 
-      Phone Number
-      e.g. +1 234 567 890
+      <div>
+        <p>Phone Number</p>
+        <input type="text" name="phone-number" id="phone-number" placeholder="e.g. +1 234 567 890" required>
+      </div>
 
-      Next Step
+      <button>Next Step</button>
     </section>
     <!-- Step 1 end -->
 
