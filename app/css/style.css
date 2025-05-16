@@ -36,20 +36,35 @@ img {
 
 /* || GLOBAL STYLES || */
 body {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--neutral-blue-100);
+    font-family: var(--font-family);
 }
 
 
 
 
 /* || CLASS STYLES || */
+.container {
+    display: flex;
+    background-color: var(--neutral-white);
+    width: 80%;
+    height: 400px;
+    padding: 10px;
+}
+
+.sidebar {
+    background-image: url('/assets/images/bg-sidebar-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40%;
+    
+}
+
+.step-1 {
+    margin-left: 30px;
+}
 
 /* || MEDIA QUERIES || */
-
-
-
-
-
-
-
-
