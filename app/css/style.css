@@ -51,7 +51,7 @@ body {
     position: absolute;
     background-color: var(--neutral-white);
     border-radius: 10px;
-    width: 80%;
+    width: 70%;
     height: 500px;
     padding: 12px;
     top: 0;
@@ -63,11 +63,11 @@ body {
 
 /* Section 1: Sidebar */
 .sidebar {
-    background-image: url('/assets/images/bg-sidebar-desktop.svg');
+    background-image: url("/assets/images/bg-sidebar-desktop.svg");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;
-    width: 25%;
+    width: 250px;
 }
 
 .sidebar__steps {
@@ -75,14 +75,14 @@ body {
     justify-content: start;
     color: var(--neutral-white);
     margin-left: 30px;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .sidebar__circle {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1.5px solid var(--neutral-white);
+    border: 1px solid var(--neutral-white);
     font-size: 12px;
     font-weight: 700;
     width: 30px;
@@ -91,7 +91,7 @@ body {
 }
 
 .active {
-    background-color: var(--primary-blue-300);
+    background-color: var(--primary-blue-200);
     color: var(--primary-blue-950);
     border: none;
 }
@@ -104,7 +104,7 @@ body {
 .sidebar__text-one {
     font-size: 10px;
     font-weight: 400;
-    color: var(--neutral-grey-500);
+    color: var(--neutral-purple-200);
     margin-bottom: 2px;
 }
 
@@ -116,7 +116,7 @@ body {
 
 /* Section 2: Personal Info */
 .step-1 {
-    width: 75%;
+    width: 70%;
     margin-left: 30px;
 }
 
