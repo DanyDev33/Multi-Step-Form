@@ -67,7 +67,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;
-    width: 250px;
+    width: 240px;
 }
 
 .sidebar__steps {
@@ -76,6 +76,7 @@ body {
     color: var(--neutral-white);
     margin-left: 30px;
     margin-top: 25px;
+    white-space: nowrap;
 }
 
 .sidebar__circle {
@@ -116,8 +117,22 @@ body {
 
 /* Section 2: Personal Info */
 .step-1 {
-    width: 70%;
     margin-left: 30px;
+    padding-top: 30px;
+    padding-left: 50px;
 }
 
+.step-1__header1 {
+    font-size: 30px;
+    color: var(--primary-blue-950);
+}
+
+
 /* || MEDIA QUERIES || */
+
+/* @media (max-width: 900px) {
+    .sidebar {
+        background-image: url('../../assets/images/bg-sidebar-mobile.svg');
+        
+    }
+} */
