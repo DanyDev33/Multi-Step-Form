@@ -48,7 +48,7 @@ body {
 /* Container */
 .container {
     display: flex;
-    position: absolute;
+    position: relative;
     background-color: var(--neutral-white);
     border-radius: 10px;
     width: 70%;
@@ -99,7 +99,7 @@ body {
 
 .sidebar__text {
     margin-left: 10px;
-    
+
 }
 
 .sidebar__text-one {
@@ -120,6 +120,7 @@ body {
     width: 60%;
     padding-left: 80px;
     padding-top: 36px;
+    flex: 1;
 }
 
 .step-1__header1 {
@@ -164,9 +165,28 @@ body {
 
 /* || MEDIA QUERIES || */
 
-/* @media (max-width: 900px) {
-    .sidebar {
-        background-image: url('../../assets/images/bg-sidebar-mobile.svg');
-        
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+
     }
-} */
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 200px;
+        z-index: 999;
+        background-image: url("../../assets/images/bg-sidebar-mobile.svg");
+        object-fit: contain;
+        background-size: cover;
+        border-radius: 0px;
+    }
+
+    .step-1__field {
+        z-index: 2;
+        position: relative;
+        width: 100%;
+    }
+}
