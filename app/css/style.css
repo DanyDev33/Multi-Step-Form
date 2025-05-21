@@ -67,7 +67,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;
-    min-width: 240px;
+    min-width: 274px;
 }
 
 .sidebar__steps {
@@ -99,7 +99,6 @@ body {
 
 .sidebar__text {
     margin-left: 10px;
-
 }
 
 .sidebar__text-one {
@@ -126,6 +125,8 @@ body {
     color: var(--primary-blue-950);
     margin-bottom: 10px;
 }
+
+/* clamp(24px, 2vw, 28px) */
 
 .step-1__header2 {
     font-size: 15px;
@@ -163,9 +164,10 @@ body {
 
 /* || MEDIA QUERIES || */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .container {
         display: block;
+        width: 100%;
         align-items: center;
         padding: 0;
         background-color: #f0f6ff;
@@ -197,7 +199,7 @@ body {
 
     .step-1 {
         width: 90%;
-        margin: 150px auto 0 auto;
+        margin: 100px auto 0 auto;
         /* overlaps below the fixed sidebar */
         padding: 2rem;
         background-color: white;
