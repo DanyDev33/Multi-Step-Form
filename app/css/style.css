@@ -166,12 +166,16 @@ body {
 @media (max-width: 768px) {
     .container {
         display: block;
+        align-items: center;
         padding: 0;
         background-color: #f0f6ff;
         position: relative;
     }
 
     .sidebar {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
         width: 100vw;
         height: 172px;
         background-image: url('../../assets/images/bg-sidebar-mobile.svg');
@@ -182,6 +186,13 @@ body {
         top: 0;
         left: 0;
         z-index: 1;
+    }
+    .sidebar__steps {
+        margin: 30px 0px 0px;
+    }
+
+    .sidebar__text {
+        display: none;
     }
 
     .step-1 {
@@ -195,5 +206,4 @@ body {
         z-index: 2;
         position: relative;
     }
-
 }
