@@ -48,7 +48,7 @@ body {
 /* Container */
 .container {
     display: flex;
-    position: relative;
+    position: absolute;
     background-color: var(--neutral-white);
     border-radius: 10px;
     width: 70%;
@@ -67,7 +67,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;
-    width: 240px;
+    min-width: 240px;
 }
 
 .sidebar__steps {
@@ -117,10 +117,8 @@ body {
 
 /* Section 2: Personal Info */
 .step-1 {
-    width: 60%;
-    padding-left: 80px;
-    padding-top: 36px;
-    flex: 1;
+    width: 100%;
+    padding: 35px 80px 0px;
 }
 
 .step-1__header1 {
@@ -165,28 +163,37 @@ body {
 
 /* || MEDIA QUERIES || */
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .container {
-        flex-direction: column;
-
+        display: block;
+        padding: 0;
+        background-color: #f0f6ff;
+        position: relative;
     }
 
     .sidebar {
+        width: 100vw;
+        height: 172px;
+        background-image: url('../../assets/images/bg-sidebar-mobile.svg');
+        background-size: cover;
+        background-position: center;
+        border-radius: 0;
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
-        height: 200px;
-        z-index: 999;
-        background-image: url("../../assets/images/bg-sidebar-mobile.svg");
-        object-fit: contain;
-        background-size: cover;
-        border-radius: 0px;
+        z-index: 1;
     }
 
-    .step-1__field {
+    .step-1 {
+        width: 90%;
+        margin: 150px auto 0 auto;
+        /* overlaps below the fixed sidebar */
+        padding: 2rem;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         z-index: 2;
         position: relative;
-        width: 100%;
     }
+
 }
