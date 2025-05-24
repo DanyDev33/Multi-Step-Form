@@ -41,8 +41,6 @@ body {
 }
 
 
-
-
 /* || CLASS STYLES || */
 
 /* Container */
@@ -115,7 +113,7 @@ body {
 }
 
 /* Section 2: Personal Info */
-.step-1 {
+.step-1, .step-2 {
     width: 100%;
     padding: 35px 80px 0px;
 }
