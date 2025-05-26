@@ -113,7 +113,8 @@ body {
 }
 
 /* Section 2: Personal Info */
-.step-1, .step-2 {
+.step-1,
+.step-2 {
     width: 100%;
     padding: 35px 80px 0px;
 }
@@ -166,6 +167,25 @@ body {
     font-weight: 500;
 }
 
+/* Section 2: Select Plan */
+.plan__monthly {
+    display: flex;
+    gap: 10px;
+}
+
+.plan__monthly-cards {
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+    padding: 15px 5px 15px 15px;
+    border: 1.5px solid var(--primary-purple-600);
+    border-radius: 10px;
+}
+
+.plan__image {
+    margin-bottom: 60px;
+}
+
 
 
 /* || MEDIA QUERIES || */
@@ -204,7 +224,8 @@ body {
         display: none;
     }
 
-    .step-1 {
+    .step-1,
+    .step-2 {
         width: 90%;
         margin: 100px auto 0 auto;
         /* overlaps below the fixed sidebar */
@@ -231,5 +252,14 @@ body {
         margin-top: 0;
         right: 0;
         bottom: 0;
+    }
+
+    .plan__monthly {
+        flex-direction: column;
+    }
+
+    .plan__monthly-cards {
+        flex-direction: row;
+        width: 100%;
     }
 }
