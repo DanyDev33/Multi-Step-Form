@@ -119,7 +119,7 @@ body {
     padding: 35px 80px 0px;
 }
 
-.step-1__header1 {
+.steps__header1 {
     font-size: 28px;
     color: var(--primary-blue-950);
     margin-bottom: 10px;
@@ -127,7 +127,7 @@ body {
 
 /* clamp(24px, 2vw, 28px) */
 
-.step-1__header2 {
+.steps__header2 {
     font-size: 15px;
     color: var(--neutral-grey-500);
     margin-bottom: 30px;
@@ -175,9 +175,10 @@ body {
 
 .plan__monthly-cards {
     display: flex;
+    
     flex-direction: column;
-    min-width: 100px;
-    padding: 15px 5px 15px 15px;
+    width: 100%;
+    padding: 15px 0px 15px 15px;
     border: 1.5px solid var(--primary-purple-600);
     border-radius: 10px;
 }
@@ -186,7 +187,19 @@ body {
     margin-bottom: 60px;
 }
 
+.plan__monthly-text {}
 
+.plan-text1 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--primary-blue-950);
+    margin-bottom: 4px;
+}
+
+.plan-text2 {
+    color: var(--neutral-grey-500);
+    font-size: 14px;
+}
 
 /* || MEDIA QUERIES || */
 
@@ -254,12 +267,22 @@ body {
         bottom: 0;
     }
 
+    /* Section 2: Select Plan */
+
     .plan__monthly {
         flex-direction: column;
+        align-items: center;
     }
 
     .plan__monthly-cards {
         flex-direction: row;
+        align-items: center;
         width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .plan__image {
+        margin: 0px 20px 0px 0px
     }
 }
