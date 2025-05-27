@@ -187,7 +187,9 @@ body {
     margin-bottom: 60px;
 }
 
-.plan__monthly-text {}
+.plan__monthly-text {
+    
+}
 
 .plan-text1 {
     font-size: 16px;
@@ -199,6 +201,7 @@ body {
 .plan-text2 {
     color: var(--neutral-grey-500);
     font-size: 14px;
+    font-weight: 400;
 }
 
 /* || MEDIA QUERIES || */
