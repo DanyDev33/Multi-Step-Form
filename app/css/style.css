@@ -180,7 +180,6 @@ body {
 
 .plan__monthly-cards {
     display: flex;
-    
     flex-direction: column;
     width: 100%;
     padding: 15px 0px 15px 15px;
@@ -211,7 +210,8 @@ body {
 
 .monthly__yearly {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20px;
     align-items: center;
     margin-top: 20px;
     background-color: var(--neutral-blue-100);
@@ -318,3 +318,30 @@ body {
         margin: 0px 0px 20px 20px;
     }
 }
+
+/* Toggle Button */
+.toggle-switch {
+      position: relative;
+      width: 36px;
+      height: 18px;
+      background-color: #002b5c; /* dark blue */
+      border-radius: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .toggle-knob {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      border-radius: 50%;
+      transition: left 0.3s;
+    }
+
+    /* Toggle Active State */
+    .toggle-switch.active .toggle-knob {
+      left: 22px;
+    }
