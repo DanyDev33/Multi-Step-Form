@@ -29,7 +29,7 @@
     <section class="sidebar">
 
       <div class="sidebar__steps">
-        <div class="sidebar__circle active">1</div>
+        <div class="sidebar__circle selected-steps">1</div>
         <div class="sidebar__text">
           <p class="sidebar__text-one">STEP 1</p>
           <p class="sidebar__text-two">YOUR INFO</p>
@@ -102,7 +102,7 @@
 
       <div class="plan__monthly">
 
-        <div class="plan__monthly-cards">
+        <div class="plan__monthly-cards card-selected">
           <div class="plan__image">
             <img src="assets/images/icon-arcade.svg" alt="arcade">
           </div>
@@ -137,12 +137,12 @@
       </div>
 
 
-      <div class="monthly__yearly">
-        <p class="monthly__yearly-text">Monthly</p>
+      <div class="subscription">
+        <p class="subscription__text subscription-selected">Monthly</p>
         <div class="toggle-switch" onclick="this.classList.toggle('active')">
           <div class="toggle-knob"></div>
         </div>
-        <p class="monthly__yearly-text">Yearly</p>
+        <p class="subscription__text">Yearly</p>
       </div>
 
       <div class="button__container">
