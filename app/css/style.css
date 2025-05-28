@@ -65,7 +65,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;
-    min-width: 274px;
+    min-width: 250px;
 }
 
 .sidebar__steps {
@@ -116,6 +116,7 @@ body {
 .step-1,
 .step-2 {
     width: 100%;
+    margin: 0px auto;
     padding: 35px 80px 0px;
 }
 
@@ -182,6 +183,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    
     padding: 15px 0px 15px 15px;
     border: 1.5px solid var(--neutral-purple-200);
     border-radius: 10px;
@@ -197,7 +199,7 @@ body {
 }
 
 .plan__monthly-text {
-
+    margin-right: 40px;
 }
 
 .plan-text1 {
