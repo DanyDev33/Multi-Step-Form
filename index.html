@@ -97,7 +97,7 @@
 
     <!-- Step 2 start -->
 
-    <section class="step-2" >
+    <section class="step-2" hidden>
       <h1 class="steps__header1">Select your plan</h1>
       <p class="steps__header2">You have the option of monthly or yearly billing.</p>
 
@@ -156,23 +156,49 @@
 
     <!-- Step 3 start -->
 
-    <!--  Pick add-ons
-  Add-ons help enhance your gaming experience.
+    <section class="step-3">
+      <h1 class="steps__header1">Pick add-ons</h1>
+      <p class="steps__header2">Add-ons help enhance your gaming experience.</p>
 
-  Online service
-  Access to multiplayer games
-  +$1/mo
+      <div class="add__ons">
 
-  Larger storage
-  Extra 1TB of cloud save
-  +$2/mo
+        <div class="add__ons-cards">
+          <input type="checkbox" id="online-service" class="add-ons-checkbox" checked>
+          <div>
+            <p>Online service</p>
+            <p>Access to multiplayer games</p>
+          </div>
+          <p>+$1/mo</p>
+        </div>
 
-  Customizable Profile
-  Custom theme on your profile
-  +$2/mo
+        <div class="add__ons-cards">
+          <input type="checkbox" id="larger-storage" class="add-ons-checkbox" checked>
+          <div>
+            <p>Larger storage</p>
+            <p>Extra 1TB of cloud save</p>
+          </div>
 
-  Go Back
-  Next Step -->
+          <p>+$2/mo</p>
+        </div>
+
+        <div class="add__ons-cards">
+          <input type="checkbox" id="customizable-profile" class="add-ons-checkbox">
+          <div>
+            <p>Customizable Profile</p>
+            <p>Custom theme on your profile</p>
+          </div>
+          <p>+$2/mo</p>
+        </div>
+
+      </div>
+
+      <div class="button__container">
+        <p class="steps__return">Go Back</p>
+        <button class="steps__button">Next Step</button>
+      </div>
+
+    </section>
+
 
     <!-- Step 3 end -->
 
