@@ -226,6 +226,10 @@ body {
     border-radius: 10px;
 }
 
+.subscription-selected {
+    color: var(--primary-blue-950);
+}
+
 .subscription__text {
     padding: 12px;
     font-size: 14px;
@@ -233,9 +237,6 @@ body {
     color: var(--neutral-grey-500);
 }
 
-.subscription-selected {
-    color: var(--primary-blue-950);
-}
 
 /* Section 2.3: Add Ons */
 .add__ons {
@@ -247,19 +248,36 @@ body {
 .add__ons-cards {
     display: flex;
     align-items: center;
-    padding: 16px;
-    border: 1.5px solid var(--primary-purple-600);
+    padding: 18px 16px ;
+    border: 1.5px solid var(--neutral-grey-500);
     border-radius: 10px;
 }
 
+.add__ons-selected {
+    background-color: var(--neutral-blue-100);
+    border: 1.5px solid var(--primary-purple-600);
+}
+
 .input__checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1.5px solid var(--neutral-grey-500);
+}
+
+.input__checkbox-selected {
     background-color: var(--primary-purple-600);
+    background-image: url('../../assets/images/icon-checkmark.svg');
+    background-repeat: no-repeat;
+    background-position: center;
     width: 20px;
     height: 20px;
     border-radius: 4px;
 }
 
-.add__ons-text {}
+.add__ons-text {
+    margin-left: 30px;
+}
 
 .add__ons-text1 {
     font-size: 16px;
@@ -278,6 +296,7 @@ body {
     color: var(--primary-purple-600);
     font-size: 14px;
     font-weight: 400;
+    margin-left: auto;
 }
 
 
