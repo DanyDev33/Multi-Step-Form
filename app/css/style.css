@@ -115,7 +115,8 @@ body {
 /* Section 2.1: Personal Info */
 .step-1,
 .step-2,
-.step-3 {
+.step-3,
+.step-4 {
     width: 100%;
     margin: 0px auto;
     padding: 35px 80px 0px;
@@ -299,7 +300,10 @@ body {
     margin-left: auto;
 }
 
-
+/* Section 2.4: Summary */
+.summary {
+    background-color: var(--neutral-blue-100);
+}
 
 
 /* || MEDIA QUERIES || */
@@ -340,7 +344,9 @@ body {
 
     .step-1,
     .step-2,
-    .step-3 {
+    .step-3,
+    .step-4 {
+        position: static;
         width: 90%;
         margin: 100px auto 0 auto;
         /* overlaps below the fixed sidebar */
@@ -372,8 +378,6 @@ body {
         margin-right: 20px;
     }
 
-
-
     /* Section 2: Select Plan */
 
     .plan__monthly {
@@ -393,6 +397,10 @@ body {
         margin: 0px 20px 0px 0px
     }
 
+    /* Section 2: Add Ons */
+
+
+    /* Section 2: Summary */
 
 
 }
@@ -424,3 +432,5 @@ body {
 .toggle-switch.active .toggle-knob {
     left: 22px;
 }
+
+/* clamp(24px, 2vw, 28px) */
