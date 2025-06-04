@@ -116,7 +116,8 @@ body {
 .step-1,
 .step-2,
 .step-3,
-.step-4 {
+.step-4, 
+.thank-you {
     width: 100%;
     margin: 0px auto;
     padding: 35px 80px 0px;
@@ -302,7 +303,8 @@ body {
 
 /* Section 2.4: Summary */
 .summary {
-    background-color: var(--neutral-blue-100);
+    background-color: var(--neutral-blue-50);
+    border-radius: 6px;
 }
 
 .summary__plan {
@@ -317,8 +319,9 @@ body {
 }
 
 .summary__plan-text1 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
+    margin-bottom: 4px;
 }
 
 .summary__plan-text2 {
@@ -328,7 +331,7 @@ body {
 }
 
 .summary__plan-text3 {
-    font-size: 15px;
+    font-size: 14px;
     color: var(--primary-blue-950);
     font-weight: 500;
 }
@@ -344,16 +347,59 @@ body {
     justify-content: space-between;
     align-items: center;
     color: var(--neutral-grey-500);
-    font-size: 14px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.summary__add-ons-text1 {}
+
+.summary__add-ons-text2 {
+    color: var(--primary-blue-950);
+}
+
+.summary__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+    margin-bottom: 40px;
+}
+
+.summary__total-text {
+    font-size: 13px;
+    color: var(--neutral-grey-500);
+}
+
+.summary__total-price {
+    color: var(--primary-purple-600);
+    font-weight: 700;
+}
+
+/* Section 2.5: Thank You*/
+.thank-you {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.thank-you__image {
     margin-bottom: 20px;
 }
 
-.summary__add-ons-text1 {
-    
+.thank-you__text {
+    text-align: center;
 }
 
-.summary__add-ons-text2 {
+.thank-you__text1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--primary-blue-950);
+    margin-bottom: 10px;
+}
 
+.thank-you__text2 {
+    color: var(--neutral-grey-500);
 }
 
 /* || MEDIA QUERIES || */
@@ -395,7 +441,8 @@ body {
     .step-1,
     .step-2,
     .step-3,
-    .step-4 {
+    .step-4,
+    .thank-you {
         position: static;
         width: 90%;
         margin: 100px auto 0 auto;
