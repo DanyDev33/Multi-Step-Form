@@ -116,7 +116,7 @@ body {
 .step-1,
 .step-2,
 .step-3,
-.step-4, 
+.step-4,
 .thank-you {
     width: 100%;
     margin: 0px auto;
@@ -128,8 +128,6 @@ body {
     color: var(--primary-blue-950);
     margin-bottom: 10px;
 }
-
-/* clamp(24px, 2vw, 28px) */
 
 .steps__header2 {
     font-size: 15px;
@@ -165,7 +163,7 @@ body {
 .steps__button {
     background-color: var(--primary-blue-950);
     color: var(--neutral-white);
-    padding: 10px 18px;
+    padding: 12px 20px;
     border: none;
     border-radius: 6px;
     font-size: 14px;
@@ -174,6 +172,14 @@ body {
 
 .steps__return {
     color: var(--neutral-grey-500);
+    font-size: 14px;
+    transition: 0.3s ease-out;
+}
+
+.steps__return:hover {
+    color: var(--primary-blue-950);
+    transition: 0.3s ease-out;
+    font-weight: 500;
 }
 
 /* Section 2.2: Select Plan */
@@ -351,8 +357,6 @@ body {
     font-size: 13px;
 }
 
-.summary__add-ons-text1 {}
-
 .summary__add-ons-text2 {
     color: var(--primary-blue-950);
 }
@@ -528,6 +532,16 @@ body {
 /* Toggle Active State */
 .toggle-switch.active .toggle-knob {
     left: 22px;
+}
+
+/* || ATTRIBUTION */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
 
 /* clamp(24px, 2vw, 28px) */
