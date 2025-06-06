@@ -38,8 +38,6 @@ img {
 body {
     background-color: var(--neutral-blue-100);
     font-family: var(--font-family);
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 
@@ -120,7 +118,7 @@ body {
 .step-3,
 .step-4,
 .thank-you {
-    width: 100%;
+    width: 90%;
     margin: 0px auto;
     padding: 35px 80px 0px;
 }
@@ -165,11 +163,17 @@ body {
 .steps__button {
     background-color: var(--primary-blue-950);
     color: var(--neutral-white);
-    padding: 12px 20px;
+    padding: 10px 22px;
     border: none;
     border-radius: 6px;
     font-size: 14px;
     font-weight: 500;
+    transition: 0.3s ease-out;
+}
+
+.steps__button:hover {
+    opacity: 0.6;
+    transition: 0.3s ease-out;
 }
 
 .steps__return {
@@ -194,10 +198,15 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-
     padding: 15px 0px 15px 15px;
     border: 1.5px solid var(--neutral-purple-200);
     border-radius: 10px;
+    transition: 0.3s ease-out;
+}
+
+.plan__monthly-cards:hover {
+    border: 1.5px solid var(--primary-purple-600);
+    transition: 0.3s ease-out;
 }
 
 .card-selected {
@@ -236,15 +245,15 @@ body {
     border-radius: 10px;
 }
 
-.subscription-selected {
-    color: var(--primary-blue-950);
-}
-
 .subscription__text {
     padding: 12px;
     font-size: 14px;
     font-weight: 500;
     color: var(--neutral-grey-500);
+}
+
+.subscription-selected {
+    color: var(--primary-blue-950);
 }
 
 
@@ -261,6 +270,12 @@ body {
     padding: 18px 16px;
     border: 1.5px solid var(--neutral-grey-500);
     border-radius: 10px;
+    transition: 0.3s ease-out;
+}
+
+.add__ons-cards:hover {
+    border: 1.5px solid var(--primary-purple-600);
+    transition: 0.3s ease-out;
 }
 
 .add__ons-selected {
@@ -336,6 +351,13 @@ body {
     font-size: 13px;
     color: var(--neutral-grey-500);
     font-weight: 400;
+    text-decoration: underline;
+    transition: 0.3s ease-out;
+}
+
+.summary__plan-text2:hover {
+    color: var(--primary-purple-600);
+    transition: 0.3s ease-out;
 }
 
 .summary__plan-text3 {
@@ -381,16 +403,19 @@ body {
     font-weight: 700;
 }
 
+.button-step4 {
+    background-color: var(--primary-purple-600);
+}
+
 /* Section 2.5: Thank You*/
 .thank-you {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: auto;
 }
 
 .thank-you__image {
-    margin-bottom: 20px;
+    width: 60px;
+    height: 60px;
+    margin: 0px auto 20px auto;
 }
 
 .thank-you__text {
@@ -398,14 +423,16 @@ body {
 }
 
 .thank-you__text1 {
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 26px;
+    font-weight: 700;
     color: var(--primary-blue-950);
     margin-bottom: 10px;
 }
 
 .thank-you__text2 {
+    line-height: 1.5;
     color: var(--neutral-grey-500);
+    margin-bottom: 50px;
 }
 
 /* || MEDIA QUERIES || */
@@ -414,7 +441,6 @@ body {
     .container {
         display: block;
         width: 100%;
-        height: 100vh;
         align-items: center;
         padding: 0;
         background-color: #f0f6ff;
@@ -431,11 +457,10 @@ body {
         background-size: cover;
         background-position: center;
         border-radius: 0;
-        position: relative;
+        position: fixed;
         top: 0;
         left: 0;
         z-index: 1;
-        
     }
 
     .sidebar__steps {
@@ -451,8 +476,9 @@ body {
     .step-3,
     .step-4,
     .thank-you {
+        position: fixed;
         width: 90%;
-        margin: -70px auto 100px auto;
+        margin: 100px auto 0 auto;
         /* overlaps below the fixed sidebar */
         padding: 2rem;
         background-color: white;
@@ -471,7 +497,6 @@ body {
         height: 60px;
         right: 0;
         bottom: 0;
-        z-index: 2;
         background-color: var(--neutral-white);
     }
 
@@ -502,26 +527,38 @@ body {
         margin: 0px 20px 0px 0px
     }
 
-    /* Section 2: Add Ons */
+    /* Section 2.3: Add Ons */
 
 
-    /* Section 2: Summary */
+    /* Section 2.4: Summary */
 
 
+    /* Section 2.5: Thank You */
+    .thank-you__image {
+        margin-top: 50px
+    }
 }
 
 /* Toggle Button */
 .toggle-switch {
     position: relative;
+    display: inline-block;
     width: 36px;
     height: 18px;
     background-color: var(--primary-blue-950);
-    /* dark blue */
     border-radius: 18px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
+/* Hide the checkbox */
+.toggle-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+/* The knob (styled with span now) */
 .toggle-knob {
     position: absolute;
     top: 4px;
@@ -530,11 +567,11 @@ body {
     height: 10px;
     background-color: white;
     border-radius: 50%;
-    transition: left 0.3s;
+    transition: left 0.3s ease;
 }
 
-/* Toggle Active State */
-.toggle-switch.active .toggle-knob {
+/* When the checkbox is checked, move the knob */
+.toggle-input:checked+.toggle-knob {
     left: 22px;
 }
 
