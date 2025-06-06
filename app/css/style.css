@@ -151,6 +151,12 @@ body {
     padding: 10px;
     border-radius: 6px;
     border: 1.5px solid var(--neutral-purple-200);
+    transition: 0.3s ease-out;
+}
+
+.step-1__input:hover {
+    border:  1.5px solid var(--primary-purple-600);
+    transition: 0.3s ease-out;
 }
 
 .button__container {
