@@ -40,6 +40,9 @@ body {
     font-family: var(--font-family);
 }
 
+.hidden {
+    display: none;
+}
 
 /* || CLASS STYLES || */
 

@@ -19,7 +19,7 @@
     <section class="sidebar">
 
       <div class="sidebar__steps">
-        <div class="sidebar__circle selected-steps">1</div>
+        <div class="sidebar__circle selected-steps" id="selected-steps-one">1</div>
         <div class="sidebar__text">
           <p class="sidebar__text-one">STEP 1</p>
           <p class="sidebar__text-two">YOUR INFO</p>
@@ -27,7 +27,7 @@
       </div>
 
       <div class="sidebar__steps">
-        <div class="sidebar__circle">2</div>
+        <div class="sidebar__circle" id="selected-steps-two">2</div>
         <div class="sidebar__text">
           <p class="sidebar__text-one">STEP 2</p>
           <p class="sidebar__text-two">SELECT PLAN</p>
@@ -35,7 +35,7 @@
       </div>
 
       <div class="sidebar__steps">
-        <div class="sidebar__circle">3</div>
+        <div class="sidebar__circle" id="selected-steps-three">3</div>
         <div class="sidebar__text">
           <p class="sidebar__text-one">STEP 3</p>
           <p class="sidebar__text-two">ADD-ONS</p>
@@ -43,7 +43,7 @@
       </div>
 
       <div class="sidebar__steps">
-        <div class="sidebar__circle">4</div>
+        <div class="sidebar__circle" id="selected-steps-four">4</div>
         <div class="sidebar__text">
           <p class="sidebar__text-one">STEP 4</p>
           <p class="sidebar__text-two">SUMMARY</p>
@@ -77,13 +77,13 @@
 
       <div class="button__container">
         <p class="steps__return" style="visibility: hidden">Go Back</p>
-        <button class="steps__button">Next Step</button>
+        <button class="steps__button" id="step-one-btn">Next Step</button>
       </div>
     </section>
     <!-- Step 1 end -->
 
     <!-- Step 2 start -->
-    <section class="step-2" id="step__two">
+    <section class="step-2 hidden" id="step__two">
       <h1 class="steps__header1">Select your plan</h1>
       <p class="steps__header2">You have the option of monthly or yearly billing.</p>
 
@@ -133,15 +133,15 @@
       </div>
 
       <div class="button__container">
-        <p class="steps__return">Go Back</p>
-        <button class="steps__button">Next Step</button>
+        <p class="steps__return" id="back-two-btn">Go Back</p>
+        <button class="steps__button" id="step-two-btn">Next Step</button>
       </div>
     </section>
     <!-- Step 2 end -->
 
 
     <!-- Step 3 start -->
-    <section class="step-3" id="step__three">
+    <section class="step-3 hidden" id="step__three">
       <h1 class="steps__header1">Pick add-ons</h1>
       <p class="steps__header2">Add-ons help enhance your gaming experience.</p>
 
@@ -176,15 +176,15 @@
       </div>
 
       <div class="button__container">
-        <p class="steps__return">Go Back</p>
-        <button class="steps__button">Next Step</button>
+        <p class="steps__return" id="back-three-btn">Go Back</p>
+        <button class="steps__button" id="step-three-btn">Next Step</button>
       </div>
     </section>
     <!-- Step 3 end -->
 
 
     <!-- Step 4 start -->
-    <section class="step-4" id="step__four">
+    <section class="step-4 hidden" id="step__four">
       <h1 class="steps__header1">Finishing up</h1>
       <p class="steps__header2">Double-check everything looks OK before confirming.</p>
 
@@ -217,8 +217,8 @@
       </div>
 
       <div class="button__container">
-        <p class="steps__return">Go Back</p>
-        <button class="steps__button button-step4">Confirm</button>
+        <p class="steps__return" id="back-four-btn">Go Back</p>
+        <button class="steps__button button-step4" id="step-four-btn">Confirm</button>
       </div>
     </section>
     <!-- Dynamically add subscription and add-on selections here -->
@@ -227,7 +227,7 @@
 
 
     <!-- Step 5 start -->
-    <section class="thank-you" id="step__five">
+    <section class="thank-you hidden" id="step__five">
       <img class="thank-you__image" src="assets/images/icon-thank-you.svg" alt="thank-you">
       <div class="thank-you__text">
         <p class="thank-you__text1">Thank you!</p>
