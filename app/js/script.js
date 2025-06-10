@@ -27,29 +27,38 @@ const numberInput = document.getElementById('phone-number')
 
 /* EVENT LISTENERS */
 stepOneBtn.addEventListener('click', () => {
-    stepOne.classList.add('hidden')
-    stepTwo.classList.remove('hidden')
-    selectedStepsOne.classList.remove('selected-steps')
-    selectedStepsTwo.classList.add('selected-steps')
+    setTimeout(() => {
+        stepOne.classList.add('hidden')
+        stepTwo.classList.remove('hidden')
+        selectedStepsOne.classList.remove('selected-steps')
+        selectedStepsTwo.classList.add('selected-steps')
+    }, 1000)
+
 })
 
 stepTwoBtn.addEventListener('click', () => {
-    stepTwo.classList.add('hidden')
-    stepThree.classList.remove('hidden')
-    selectedStepsTwo.classList.remove('selected-steps')
-    selectedStepsThree.classList.add('selected-steps')
+    setTimeout(() => {
+        stepTwo.classList.add('hidden')
+        stepThree.classList.remove('hidden')
+        selectedStepsTwo.classList.remove('selected-steps')
+        selectedStepsThree.classList.add('selected-steps')
+    }, 1000)
 })
 
 stepThreeBtn.addEventListener('click', () => {
-    stepThree.classList.add('hidden')
-    stepFour.classList.remove('hidden')
-    selectedStepsThree.classList.remove('selected-steps')
-    selectedStepsFour.classList.add('selected-steps')
+    setTimeout(() => {
+        stepThree.classList.add('hidden')
+        stepFour.classList.remove('hidden')
+        selectedStepsThree.classList.remove('selected-steps')
+        selectedStepsFour.classList.add('selected-steps')
+    }, 1000);
 })
 
 stepFourBtn.addEventListener('click', () => {
-    stepFour.classList.add('hidden')
-    stepFive.classList.remove('hidden')
+    setTimeout(() => {
+        stepFour.classList.add('hidden')
+        stepFive.classList.remove('hidden')
+    }, 1000);
 })
 
 previousStepTwoBtn.addEventListener('click', () => {
@@ -71,4 +80,36 @@ previousStepFourBtn.addEventListener('click', () => {
     stepThree.classList.remove('hidden')
     selectedStepsFour.classList.remove('selected-steps')
     selectedStepsThree.classList.add('selected-steps')
+})
+
+/*  */
+const selectedCard1 = document.getElementById('card-selected1')
+const selectedCard2 = document.getElementById('card-selected2')
+const selectedCard3 = document.getElementById('card-selected3')
+
+
+selectedCard1.addEventListener('click', () => {
+    selectedCard1.classList.add('card-selected')
+    selectedCard2.classList.remove('card-selected') || selectedCard3.classList.remove('card-selected')
+})
+
+selectedCard2.addEventListener('click', () => {
+    selectedCard2.classList.add('card-selected')
+    selectedCard1.classList.remove('card-selected') || selectedCard3.classList.remove('card-selected')
+})
+
+selectedCard3.addEventListener('click', () => {
+    selectedCard3.classList.add('card-selected')
+    selectedCard1.classList.remove('card-selected') || selectedCard2.classList.remove('card-selected')
+})
+
+/*  */
+
+const addOnsSelected1 = document.getElementById('add-ons1')
+const addOnsSelected2 = document.getElementById('add-ons2')
+const addOnsSelected3 = document.getElementById('add-ons3')
+
+addOnsSelected3.addEventListener('click', () => {
+    addOnsSelected3.classList.add('input__checkbox-selected')
+    addOnsSelected3.parentElement.classList.add('add__ons-selected')
 })
