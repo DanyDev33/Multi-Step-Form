@@ -109,7 +109,32 @@ const addOnsSelected1 = document.getElementById('add-ons1')
 const addOnsSelected2 = document.getElementById('add-ons2')
 const addOnsSelected3 = document.getElementById('add-ons3')
 
+addOnsSelected1.addEventListener('click', () => {
+    if (addOnsSelected1.classList.contains('input__checkbox-selected')) {
+        addOnsSelected1.classList.remove('input__checkbox-selected')
+        addOnsSelected1.parentElement.classList.remove('add__ons-selected')
+    } else {
+        addOnsSelected1.classList.add('input__checkbox-selected')
+        addOnsSelected1.parentElement.classList.add('add__ons-selected')
+    }
+})
+
+addOnsSelected2.addEventListener('click', () => {
+    if (addOnsSelected2.classList.contains('input__checkbox-selected')) {
+        addOnsSelected2.classList.remove('input__checkbox-selected')
+        addOnsSelected2.parentElement.classList.remove('add__ons-selected')
+    } else {
+        addOnsSelected2.classList.add('input__checkbox-selected')
+        addOnsSelected2.parentElement.classList.add('add__ons-selected')
+    }
+})
+
 addOnsSelected3.addEventListener('click', () => {
-    addOnsSelected3.classList.add('input__checkbox-selected')
-    addOnsSelected3.parentElement.classList.add('add__ons-selected')
+    if (addOnsSelected3.classList.contains('input__checkbox-selected')) {
+        addOnsSelected3.classList.remove('input__checkbox-selected')
+        addOnsSelected3.parentElement.classList.remove('add__ons-selected')
+    } else {
+        addOnsSelected3.classList.add('input__checkbox-selected')
+        addOnsSelected3.parentElement.classList.add('add__ons-selected')
+    }
 })
