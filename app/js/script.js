@@ -10,12 +10,14 @@ const selectedStepsThree = document.getElementById('selected-steps-three')
 const selectedStepsFour = document.getElementById('selected-steps-four')
 
 /* NEXT STEP BUTTONS */
+
 const stepOneBtn = document.getElementById('step-one-btn')
 const stepTwoBtn = document.getElementById('step-two-btn')
 const stepThreeBtn = document.getElementById('step-three-btn')
 const stepFourBtn = document.getElementById('step-four-btn')
 
 /* GO BACK BUTTONS */
+
 const previousStepTwoBtn = document.getElementById('back-two-btn')
 const previousStepThreeBtn = document.getElementById('back-three-btn')
 const previousStepFourBtn = document.getElementById('back-four-btn')
@@ -87,23 +89,35 @@ const selectedCard1 = document.getElementById('card-selected1')
 const selectedCard2 = document.getElementById('card-selected2')
 const selectedCard3 = document.getElementById('card-selected3')
 
+const summaryPlan1 = document.getElementById('summary__plan-text1')
+const summaryPlan3 = document.getElementById('summary__plan-text3')
+const changePlan = document.getElementById('change-plan')
 
 selectedCard1.addEventListener('click', () => {
     selectedCard1.classList.add('card-selected')
     selectedCard2.classList.remove('card-selected') || selectedCard3.classList.remove('card-selected')
+
+    summaryPlan1.innerText = 'Arcade (Monthly)'
+    summaryPlan3.innerText = '$9/mo'
 })
 
 selectedCard2.addEventListener('click', () => {
     selectedCard2.classList.add('card-selected')
     selectedCard1.classList.remove('card-selected') || selectedCard3.classList.remove('card-selected')
+
+    summaryPlan1.innerText = 'Advanced (Monthly)'
+    summaryPlan3.innerText = '$12/mo'
 })
 
 selectedCard3.addEventListener('click', () => {
     selectedCard3.classList.add('card-selected')
     selectedCard1.classList.remove('card-selected') || selectedCard2.classList.remove('card-selected')
+
+    summaryPlan1.innerText = 'Pro (Monthly)'
+    summaryPlan3.innerText = '$15/mo'
 })
 
-/*  */
+/* ADD ONS */
 
 const addOnsSelected1 = document.getElementById('add-ons1')
 const addOnsSelected2 = document.getElementById('add-ons2')
@@ -116,6 +130,7 @@ addOnsSelected1.addEventListener('click', () => {
     } else {
         addOnsSelected1.classList.add('input__checkbox-selected')
         addOnsSelected1.parentElement.classList.add('add__ons-selected')
+
     }
 })
 
@@ -136,5 +151,8 @@ addOnsSelected3.addEventListener('click', () => {
     } else {
         addOnsSelected3.classList.add('input__checkbox-selected')
         addOnsSelected3.parentElement.classList.add('add__ons-selected')
+
     }
 })
+
+
