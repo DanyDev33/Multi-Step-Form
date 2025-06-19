@@ -1,4 +1,4 @@
-const stepOne = document.getElementById('step__one')
+/* const stepOne = document.getElementById('step__one')
 const stepTwo = document.getElementById('step__two')
 const stepThree = document.getElementById('step__three')
 const stepFour = document.getElementById('step__four')
@@ -7,28 +7,28 @@ const stepFive = document.getElementById('step__five')
 const selectedStepsOne = document.getElementById('selected-steps-one')
 const selectedStepsTwo = document.getElementById('selected-steps-two')
 const selectedStepsThree = document.getElementById('selected-steps-three')
-const selectedStepsFour = document.getElementById('selected-steps-four')
+const selectedStepsFour = document.getElementById('selected-steps-four') */
 
 /* NEXT STEP BUTTONS */
 
-const stepOneBtn = document.getElementById('step-one-btn')
+/* const stepOneBtn = document.getElementById('step-one-btn')
 const stepTwoBtn = document.getElementById('step-two-btn')
 const stepThreeBtn = document.getElementById('step-three-btn')
-const stepFourBtn = document.getElementById('step-four-btn')
+const stepFourBtn = document.getElementById('step-four-btn') */
 
 /* GO BACK BUTTONS */
-
+/* const changePlan = document.getElementById('change-plan')
 const previousStepTwoBtn = document.getElementById('back-two-btn')
 const previousStepThreeBtn = document.getElementById('back-three-btn')
-const previousStepFourBtn = document.getElementById('back-four-btn')
+const previousStepFourBtn = document.getElementById('back-four-btn') */
 
 /* INPUT */
-const nameInput = document.getElementById('name')
+/* const nameInput = document.getElementById('name')
 const emailInput = document.getElementById('email-address')
-const numberInput = document.getElementById('phone-number')
+const numberInput = document.getElementById('phone-number') */
 
 /* EVENT LISTENERS */
-stepOneBtn.addEventListener('click', () => {
+/* stepOneBtn.addEventListener('click', () => {
     setTimeout(() => {
         stepOne.classList.add('hidden')
         stepTwo.classList.remove('hidden')
@@ -82,16 +82,16 @@ previousStepFourBtn.addEventListener('click', () => {
     stepThree.classList.remove('hidden')
     selectedStepsFour.classList.remove('selected-steps')
     selectedStepsThree.classList.add('selected-steps')
-})
+}) */
 
 /*  */
-const selectedCard1 = document.getElementById('card-selected1')
+/* const selectedCard1 = document.getElementById('card-selected1')
 const selectedCard2 = document.getElementById('card-selected2')
 const selectedCard3 = document.getElementById('card-selected3')
 
 const summaryPlan1 = document.getElementById('summary__plan-text1')
 const summaryPlan3 = document.getElementById('summary__plan-text3')
-const changePlan = document.getElementById('change-plan')
+
 
 selectedCard1.addEventListener('click', () => {
     selectedCard1.classList.add('card-selected')
@@ -115,11 +115,11 @@ selectedCard3.addEventListener('click', () => {
 
     summaryPlan1.innerText = 'Pro (Monthly)'
     summaryPlan3.innerText = '$15/mo'
-})
+}) */
 
 /* ADD ONS */
 
-const addOnsSelected1 = document.getElementById('add-ons1')
+/* const addOnsSelected1 = document.getElementById('add-ons1')
 const addOnsSelected2 = document.getElementById('add-ons2')
 const addOnsSelected3 = document.getElementById('add-ons3')
 
@@ -153,6 +153,26 @@ addOnsSelected3.addEventListener('click', () => {
         addOnsSelected3.parentElement.classList.add('add__ons-selected')
 
     }
-})
+}) */
 
+const steps = Array.from(document.querySelectorAll('steps'))
+const stepBtns = Array.from(document.querySelectorAll('step-btns'))
 
+stepBtns.forEach(stepBtn => {
+    setTimeout(() => {
+        stepBtn.addEventListener('click', () => {
+            const currentStep = stepBtn.closest('steps')
+            const next = currentStep.nextElementSibling
+
+            if (next) {
+                currentStep.classList.add('hidden')
+                next.classList.remove('hidden')
+            }
+        })
+    }, 1000);
+});
+
+/* stepOne.classList.add('hidden')
+stepTwo.classList.remove('hidden')
+selectedStepsOne.classList.remove('selected-steps')
+selectedStepsTwo.classList.add('selected-steps') */
