@@ -1,28 +1,27 @@
+/* VARIABLES */
+
+/* Steps (1-5) */
 const stepOne = document.getElementById('step__one')
 const stepTwo = document.getElementById('step__two')
 const stepThree = document.getElementById('step__three')
 const stepFour = document.getElementById('step__four')
 const stepFive = document.getElementById('step__five')
-
+/* Selected Steps */
 const selectedStepsOne = document.getElementById('selected-steps-one')
 const selectedStepsTwo = document.getElementById('selected-steps-two')
 const selectedStepsThree = document.getElementById('selected-steps-three')
 const selectedStepsFour = document.getElementById('selected-steps-four')
-
-/* NEXT STEP BUTTONS */
-
+/* Next Step Buttons */
 const stepOneBtn = document.getElementById('step-one-btn')
 const stepTwoBtn = document.getElementById('step-two-btn')
 const stepThreeBtn = document.getElementById('step-three-btn')
 const stepFourBtn = document.getElementById('step-four-btn')
-
-/* GO BACK BUTTONS */
+/* Previous Step Buttons */
 const changePlan = document.getElementById('change-plan')
 const previousStepTwoBtn = document.getElementById('back-two-btn')
 const previousStepThreeBtn = document.getElementById('back-three-btn')
 const previousStepFourBtn = document.getElementById('back-four-btn')
-
-/* INPUT */
+/* Input Fields (Step 1) */
 const nameInput = document.getElementById('name')
 const emailInput = document.getElementById('email-address')
 const numberInput = document.getElementById('phone-number')
@@ -119,9 +118,12 @@ selectedCard3.addEventListener('click', () => {
 
 /* ADD ONS */
 
-const addOnsSelected1 = document.getElementById('add-ons1')
+/* const addOnsSelected1 = document.getElementById('add-ons1')
 const addOnsSelected2 = document.getElementById('add-ons2')
 const addOnsSelected3 = document.getElementById('add-ons3')
+
+
+
 
 addOnsSelected1.addEventListener('click', () => {
     if (addOnsSelected1.classList.contains('input__checkbox-selected')) {
@@ -153,5 +155,18 @@ addOnsSelected3.addEventListener('click', () => {
         addOnsSelected3.parentElement.classList.add('add__ons-selected')
 
     }
-})
+}) */
 
+const addOnsSelected = document.querySelectorAll('.input__checkbox')
+
+addOnsSelected.forEach(addOnSelected => {
+    addOnSelected.addEventListener('click', () => {
+        if (addOnSelected.classList.contains('input__checkbox-selected')) {
+            addOnSelected.classList.remove('input__checkbox-selected')
+            addOnSelected.parentElement.classList.remove('add__ons-selected')
+        } else {
+            addOnSelected.classList.add('input__checkbox-selected')
+            addOnSelected.parentElement.classList.add('add__ons-selected')
+        }
+    })
+})
