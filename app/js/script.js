@@ -130,16 +130,26 @@ plansSelected.forEach(planSelected => {
 /* Monthly/Yearly Toggle */
 const toggleInput = document.querySelector('.toggle-input')
 const plans = document.querySelectorAll('.subscription__text')
-
+const extraMonths = document.querySelectorAll('.plan-text3')
+const planPrice1 = document.getElementById('price_one')
+const planPrice2 = document.getElementById('price_two')
+const planPrice3 = document.getElementById('price_three')
 
 toggleInput.addEventListener('change', () => {
     plans.forEach(plan => plan.classList.remove('subscription-selected'))
 
     if (toggleInput.checked) {
         plans[1].classList.add('subscription-selected')
-        
+        extraMonths.forEach(extraMonth => extraMonth.classList.remove('hidden'))
+        planPrice1.textContent = `$90/yr`
+        planPrice2.textContent = `$120/yr`
+        planPrice3.textContent = `$150/yr`
     } else {
         plans[0].classList.add('subscription-selected')
+        extraMonths.forEach(extraMonth => extraMonth.classList.add('hidden'))
+        planPrice1.textContent = `$9/mo`
+        planPrice2.textContent = `$12/mo`
+        planPrice3.textContent = `$15/mo`
     }
 })
 
