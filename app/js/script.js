@@ -127,6 +127,22 @@ plansSelected.forEach(planSelected => {
     })
 });
 
+/* Monthly/Yearly Toggle */
+const toggleInput = document.querySelector('.toggle-input')
+const plans = document.querySelectorAll('.subscription__text')
+
+
+toggleInput.addEventListener('change', () => {
+    plans.forEach(plan => plan.classList.remove('subscription-selected'))
+
+    if (toggleInput.checked) {
+        plans[1].classList.add('subscription-selected')
+        
+    } else {
+        plans[0].classList.add('subscription-selected')
+    }
+})
+
 
 /* ADD ONS */
 const addOnsSelected = document.querySelectorAll('.input__checkbox')
