@@ -135,6 +135,10 @@ const planPrice1 = document.getElementById('price_one')
 const planPrice2 = document.getElementById('price_two')
 const planPrice3 = document.getElementById('price_three')
 
+const addOnsPrice1 = document.getElementById('add-ons-one')
+const addOnsPrice2 = document.getElementById('add-ons-two')
+const addOnsPrice3 = document.getElementById('add-ons-three')
+
 toggleInput.addEventListener('change', () => {
     plans.forEach(plan => plan.classList.remove('subscription-selected'))
 
@@ -144,12 +148,20 @@ toggleInput.addEventListener('change', () => {
         planPrice1.textContent = `$90/yr`
         planPrice2.textContent = `$120/yr`
         planPrice3.textContent = `$150/yr`
+
+        addOnsPrice1.textContent = `$10/yr`
+        addOnsPrice2.textContent = `$20/yr`
+        addOnsPrice3.textContent = `$20/yr`
     } else {
         plans[0].classList.add('subscription-selected')
         extraMonths.forEach(extraMonth => extraMonth.classList.add('hidden'))
         planPrice1.textContent = `$9/mo`
         planPrice2.textContent = `$12/mo`
         planPrice3.textContent = `$15/mo`
+
+        addOnsPrice1.textContent = `$1/mo`
+        addOnsPrice2.textContent = `$2/mo`
+        addOnsPrice3.textContent = `$2/mo`
     }
 })
 
