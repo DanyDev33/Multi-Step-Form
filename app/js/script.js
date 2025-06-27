@@ -1,33 +1,33 @@
 /* VARIABLES */
 
 /* Steps (1-5) */
-const stepOne = document.getElementById('step__one')
+/* const stepOne = document.getElementById('step__one')
 const stepTwo = document.getElementById('step__two')
 const stepThree = document.getElementById('step__three')
 const stepFour = document.getElementById('step__four')
-const stepFive = document.getElementById('step__five')
+const stepFive = document.getElementById('step__five') */
 /* Selected Steps */
-const selectedStepsOne = document.getElementById('selected-steps-one')
+/* const selectedStepsOne = document.getElementById('selected-steps-one')
 const selectedStepsTwo = document.getElementById('selected-steps-two')
 const selectedStepsThree = document.getElementById('selected-steps-three')
-const selectedStepsFour = document.getElementById('selected-steps-four')
+const selectedStepsFour = document.getElementById('selected-steps-four') */
 /* Next Step Buttons */
-const stepOneBtn = document.getElementById('step-one-btn')
+/* const stepOneBtn = document.getElementById('step-one-btn')
 const stepTwoBtn = document.getElementById('step-two-btn')
 const stepThreeBtn = document.getElementById('step-three-btn')
-const stepFourBtn = document.getElementById('step-four-btn')
+const stepFourBtn = document.getElementById('step-four-btn') */
 /* Previous Step Buttons */
-const changePlan = document.getElementById('change-plan')
+/* const changePlan = document.getElementById('change-plan')
 const previousStepTwoBtn = document.getElementById('back-two-btn')
 const previousStepThreeBtn = document.getElementById('back-three-btn')
-const previousStepFourBtn = document.getElementById('back-four-btn')
+const previousStepFourBtn = document.getElementById('back-four-btn') */
 /* Input Fields (Step 1) */
-const nameInput = document.getElementById('name')
+/* const nameInput = document.getElementById('name')
 const emailInput = document.getElementById('email-address')
-const numberInput = document.getElementById('phone-number')
+const numberInput = document.getElementById('phone-number') */
 
 /* EVENT LISTENERS */
-stepOneBtn.addEventListener('click', () => {
+/* stepOneBtn.addEventListener('click', () => {
     setTimeout(() => {
         stepOne.classList.add('hidden')
         stepTwo.classList.remove('hidden')
@@ -81,40 +81,34 @@ previousStepFourBtn.addEventListener('click', () => {
     stepThree.classList.remove('hidden')
     selectedStepsFour.classList.remove('selected-steps')
     selectedStepsThree.classList.add('selected-steps')
-})
-
-/*  */
-/* const selectedCard1 = document.getElementById('card-selected1')
-const selectedCard2 = document.getElementById('card-selected2')
-const selectedCard3 = document.getElementById('card-selected3')
-
-const summaryPlan1 = document.getElementById('summary__plan-text1')
-const summaryPlan3 = document.getElementById('summary__plan-text3')
-
-
-selectedCard1.addEventListener('click', () => {
-    selectedCard1.classList.add('card-selected')
-    selectedCard2.classList.remove('card-selected') || selectedCard3.classList.remove('card-selected')
-
-    summaryPlan1.innerText = 'Arcade (Monthly)'
-    summaryPlan3.innerText = '$9/mo'
-})
-
-selectedCard2.addEventListener('click', () => {
-    selectedCard2.classList.add('card-selected')
-    selectedCard1.classList.remove('card-selected') || selectedCard3.classList.remove('card-selected')
-
-    summaryPlan1.innerText = 'Advanced (Monthly)'
-    summaryPlan3.innerText = '$12/mo'
-})
-
-selectedCard3.addEventListener('click', () => {
-    selectedCard3.classList.add('card-selected')
-    selectedCard1.classList.remove('card-selected') || selectedCard2.classList.remove('card-selected')
-
-    summaryPlan1.innerText = 'Pro (Monthly)'
-    summaryPlan3.innerText = '$15/mo'
 }) */
+const steps = document.querySelectorAll('.steps')
+const stepsBtn = document.querySelectorAll('.steps-btn')
+
+/* stepsBtn.forEach(stepBtn => {
+    stepBtn.addEventListener('click', () => {
+        steps.forEach(step => {
+            if (step.classList.contains('hidden')) {
+                step.classList.add('hidden')
+                step.nextElementSibling.classList.remove('hidden')
+            }
+        });
+    })
+}) */
+
+stepsBtn.forEach((stepBtn, index) => {
+    stepBtn.addEventListener('click', () => {
+        setTimeout(() => {
+            // Hide current step
+            steps[index].classList.add('hidden');
+
+            // Show the next step if it exists
+            if (steps[index + 1]) {
+                steps[index + 1].classList.remove('hidden');
+            }
+        }, 1000)
+    })
+})
 
 const plansSelected = document.querySelectorAll('.plan__monthly-cards')
 
@@ -124,6 +118,7 @@ plansSelected.forEach(planSelected => {
             planSel.classList.remove('card-selected')
         })
         planSelected.classList.add('card-selected')
+
     })
 });
 
@@ -138,6 +133,8 @@ const planPrice3 = document.getElementById('price_three')
 const addOnsPrice1 = document.getElementById('add-ons-one')
 const addOnsPrice2 = document.getElementById('add-ons-two')
 const addOnsPrice3 = document.getElementById('add-ons-three')
+
+
 
 toggleInput.addEventListener('change', () => {
     plans.forEach(plan => plan.classList.remove('subscription-selected'))
