@@ -19,9 +19,17 @@ const addOnsPrice3 = document.getElementById('add-ons-three')
 
 const addOnsSelected = document.querySelectorAll('.input__checkbox')
 
+const nameInput = document.getElementById('name')
+const emailInput = document.getElementById('email-address')
+const phoneInput = document.getElementById('phone-number')
+
 /* Next Step */
 stepsBtn.forEach((stepBtn, index) => {
     stepBtn.addEventListener('click', () => {
+        if (nameInput.value.trim() === "" || emailInput.value.trim() === "" || phoneInput.value.trim() === "") {
+            alert("Please fill in the field before continuing.")
+            return
+        } 
         setTimeout(() => {
             // Hide current step
             steps[index].classList.add('hidden')
