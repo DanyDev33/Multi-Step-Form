@@ -32,20 +32,22 @@ stepsBtn.forEach((stepBtn, index) => {
                 steps[index + 1].classList.remove('hidden');
                 stepsSelected[index + 1].classList.add('selected-steps')
             }
-        }, 1000)
+        }, 500)
     })
 })
 
 /* Previous Step */
 lastStepsBtn.forEach((lastStepBtn, index) => {
     lastStepBtn.addEventListener('click', () => {
-        steps[index].classList.add('hidden')
-        stepsSelected[index].classList.remove('selected-steps')
+        setTimeout(() => {
+            steps[index].classList.add('hidden')
+            stepsSelected[index].classList.remove('selected-steps')
 
-        if (steps[index]) {
-            steps[index - 1].classList.remove('hidden')
-            stepsSelected[index - 1].classList.add('selected-steps')
-        }
+            if (steps[index]) {
+                steps[index - 1].classList.remove('hidden')
+                stepsSelected[index - 1].classList.add('selected-steps')
+            }
+        }, 500);
     })
 })
 
@@ -85,7 +87,6 @@ toggleInput.addEventListener('change', () => {
         addOnsPrice3.textContent = `$2/mo`
     }
 })
-
 
 /* Add Ons */
 addOnsSelected.forEach(addOnSelected => {
