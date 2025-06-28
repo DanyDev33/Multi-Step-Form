@@ -42,11 +42,10 @@ lastStepsBtn.forEach((lastStepBtn, index) => {
         steps[index].classList.add('hidden')
         stepsSelected[index].classList.remove('selected-steps')
 
-        if (steps[index - 1]) {
+        if (steps[index]) {
             steps[index - 1].classList.remove('hidden')
             stepsSelected[index - 1].classList.add('selected-steps')
         }
-
     })
 })
 
@@ -57,9 +56,8 @@ plansSelected.forEach(planSelected => {
             planSel.classList.remove('card-selected')
         })
         planSelected.classList.add('card-selected')
-
     })
-});
+})
 
 /* Monthly/Yearly Toggle */
 toggleInput.addEventListener('change', () => {
