@@ -143,11 +143,20 @@ body {
     margin-bottom: 16px;
 }
 
+.step1-text_group {
+    display: flex;
+    justify-content: space-between;
+}
+
 .step-1__texts {
     color: var(--primary-blue-950);
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 6px;
+}
+
+.text__required {
+    color: var(--primary-red-500);
 }
 
 .step-1__input {
@@ -156,6 +165,10 @@ body {
     border-radius: 6px;
     border: 1.5px solid var(--neutral-purple-200);
     transition: 0.3s ease-out;
+}
+
+.input__required {
+    border: 1.5px solid var(--primary-red-500);
 }
 
 .step-1__input:hover {

@@ -19,17 +19,22 @@ const addOnsPrice3 = document.getElementById('add-ons-three')
 
 const addOnsSelected = document.querySelectorAll('.input__checkbox')
 
-const nameInput = document.getElementById('name')
-const emailInput = document.getElementById('email-address')
-const phoneInput = document.getElementById('phone-number')
-
 /* Next Step */
 stepsBtn.forEach((stepBtn, index) => {
+    const inputs = document.querySelectorAll('.step-1__input')
+    const changePlan = document.getElementById('change-plan')
+
     stepBtn.addEventListener('click', () => {
-        if (nameInput.value.trim() === "" || emailInput.value.trim() === "" || phoneInput.value.trim() === "") {
-            alert("Please fill in the field before continuing.")
-            return
-        } 
+        inputs.forEach(input => {
+            if (input.value.trim() === "") {
+                const textRequired = input.parentElement.querySelector('.req')
+                input.classList.add('input__required')
+
+                textRequired.classList.remove('hidden')
+                textRequired.classList.add('text__required')
+            }
+        })
+
         setTimeout(() => {
             // Hide current step
             steps[index].classList.add('hidden')
@@ -41,6 +46,13 @@ stepsBtn.forEach((stepBtn, index) => {
                 stepsSelected[index + 1].classList.add('selected-steps')
             }
         }, 500)
+    })
+
+    changePlan.addEventListener('click', () => {
+        steps[index].classList.add('hidden')
+        stepsSelected[index].classList.remove('selected-steps')
+        steps[1].classList.remove('hidden')
+        stepsSelected[1].classList.add('selected-steps')
     })
 })
 
