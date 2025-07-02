@@ -19,6 +19,16 @@ const addOnsPrice3 = document.getElementById('add-ons-three')
 
 const addOnsSelected = document.querySelectorAll('.input__checkbox')
 
+const personalInfo = {
+    name: '',
+    emailAddress: '',
+    phoneNumber: '',
+}
+let { name: fullName, emailAddress, phoneNumber } = personalInfo
+
+const infoArray = []
+infoArray.push(personalInfo)
+
 /* Next Step */
 stepsBtn.forEach((stepBtn, index) => {
     const inputs = document.querySelectorAll('.step-1__input')
@@ -29,6 +39,8 @@ stepsBtn.forEach((stepBtn, index) => {
             if (input.value.trim() === "") {
                 const textRequired = input.parentElement.querySelector('.req')
                 input.classList.add('input__required')
+
+                emailAddress = input[index + 1].value 
 
                 textRequired.classList.remove('hidden')
                 textRequired.classList.add('text__required')
