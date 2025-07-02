@@ -40,8 +40,6 @@ stepsBtn.forEach((stepBtn, index) => {
                 const textRequired = input.parentElement.querySelector('.req')
                 input.classList.add('input__required')
 
-                emailAddress = input[index + 1].value 
-
                 textRequired.classList.remove('hidden')
                 textRequired.classList.add('text__required')
             }
